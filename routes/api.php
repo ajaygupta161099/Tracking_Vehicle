@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\api\VehicleReportController;
+use App\Http\Controllers\api\DocumentController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::post('storeVehicle', [VehicleReportController::class, 'store']);
+
+Route::post('insertDocument', [DocumentController::class, 'insert']);
+
+Route::post('updateDocument/{id}', [DocumentController::class,'update']);
