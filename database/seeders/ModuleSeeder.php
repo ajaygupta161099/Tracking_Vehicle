@@ -52,10 +52,10 @@ class ModuleSeeder extends Seeder
         ];
 
         foreach ($data as $moduleData) {
+
             $Module = Module::updateOrCreate(['module_name' => $moduleData['module_name']], $moduleData);
         }
 
-        // Moved the response outside the loop to avoid returning prematurely
         return response()->json(['message' => 'Modules created successfully']);
     }
     }
