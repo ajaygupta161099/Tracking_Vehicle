@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use App\Http\Controllers\api\VehicleReportController;
 use App\Http\Controllers\api\DocumentController;
+use App\Http\Controllers\api\PermissionController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,7 @@ Route::post('storeVehicle', [VehicleReportController::class, 'store']);
 Route::post('insertDocument', [DocumentController::class, 'insert']);
 
 Route::post('updateDocument/{id}', [DocumentController::class,'update']);
+
+Route::post('addpermission', [PermissionController::class, 'addPermission']);
+
+Route::post('getModulebyCompany', [PermissionController::class, 'getModulebyCompany']);
